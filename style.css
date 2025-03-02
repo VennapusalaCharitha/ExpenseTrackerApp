@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sand&display=swap");
+:root{
+    --box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px, 2px rgba(0,0,0,0.24)
+    --primary-color: #3498db
+    --secondary-color:#e7e7e7
+    --accent-color:#e74c3c
+
+}
