@@ -69,5 +69,28 @@ function updatevalues(){
 
     function removeTransaction(id){
         transactions = transactions.filter(transactions => transaction.id !==id);
+
+        updateLocalstorage();
+        Init();
     }
-}
+    function updateLocalStorage(){
+        localStorage.setItem('transaction', JSON.stringify(transaction));
+    }
+    function init(){
+        list.innerHTML = '';
+
+        transactions.forEach(addTransactionDOM);
+        updatevalues();
+    }
+    init();
+    document.addEventListener('DOMContentLoaded', function(){
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            addTransaction();
+
+            incomeText.value= '';
+            expenseText.value= '';
+        });
+    });
+}form.addEventListener('submit', addTransaction);
